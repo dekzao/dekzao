@@ -1,16 +1,16 @@
-### Hi there 👋
+```js
+import SoftwareDeveloper from 'ERP24';
 
-<!--
-**dekzao/dekzao** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+class Bio extends SoftwareDeveloper {
+  name     = 'Pedro Soares';
+  title    = 'Software Developer';
+  company  = 'ERP24';
+  location = 'Portugal, PT';
+}
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+class Skills extends SoftwareDeveloper {
+  languages  = ['C#', 'Java', 'JavaScript', 'PHP'];
+  databases  = ['SQL Server', 'MySQL'];
+  frameworks = ['NET Core 3.1'];
+}
+```
