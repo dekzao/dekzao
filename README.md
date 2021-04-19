@@ -1,16 +1,70 @@
-```js
-import SoftwareDeveloper from 'ERP24';
+```cs
+using ERP24;
 
-class Bio extends SoftwareDeveloper {
-  name     = 'Pedro Soares';
-  title    = 'Software Developer';
-  company  = 'ERP24';
-  location = 'Portugal, PT';
+namespace ERP24.SoftwareDeveloper
+{
+  public class SoftwareDeveloper 
+  {
+    private string _name;
+    private string _title;
+    private string _company;
+    private string _location;
+
+    public string Name 
+    {
+      get { return _name; }
+      set { _name = value; }
+    }
+  
+    public string Title 
+    {
+      get { return _title; }
+      set { _title = value; }
+    }
+   
+    public string Company 
+    {
+      get { return _company; }
+      set { _company = value; }
+    }
+  
+    public string Location 
+    {
+      get { return _location; }
+      set { _location = value; }
+    }
+  
+    public SoftwareDeveloper(string name, string title, string company, string location)
+    {
+      Name = name;
+      Title = title;
+      Company = company;
+      Location = location;
+    }
+  
+    public virtual string getInfo()
+    {
+      return $"{Name} is a {Title} based in {Location} currently working for {Company}";
+    }
+  }
 }
+```
 
-class Skills extends SoftwareDeveloper {
-  languages  = ['C#', 'Java', 'JavaScript', 'PHP'];
-  databases  = ['SQL Server', 'MySQL'];
-  frameworks = ['NET Core 3.1'];
+
+```cs
+using System;
+using ERP24.SoftwareDeveloper;
+
+namespace ERP24.SoftwareDeveloper
+{
+  class Program 
+  {
+        static void Main(string[] args) 
+        {
+         var user = new SoftwareDeveloper("Pedro Soares", "Sofware Developer", "ERP24", "Porto");
+         Console.WriteLine(user.getInfo());
+         Console.ReadLine();
+        }
+  }
 }
 ```
